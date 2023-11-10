@@ -1,1 +1,1 @@
-# tp-especificacion
+# Tienda Compra Gamer
