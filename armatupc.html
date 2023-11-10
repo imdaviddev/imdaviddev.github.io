@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/iconos/icons8-luna-32.png" type="image/x-icon">
+
+    <!-- Titulo de la pagina -->
+    <title>CompraGamer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- PRODUCTOS CSS -->
+    <link rel="stylesheet" href="css/productos-page.css">
+
+    <!-- CARRITO CSS -->
+    <link rel="stylesheet" href="css/carrito.css">
+
+</head>
+<body>
+    
+   <!-- Header de la pagina -->
+   <header class="header">
+    <ul class="banner-top">
+        <li>
+            <img class="icon" src="./assets/camion-icon.svg" alt=""> Envios dento de CABA en el dia!
+        </li>
+        <li><img class="icon" src="./assets/camion-icon.svg" alt="">Seguir mi pedido</li>
+        <li><img class="icon" src="./assets/fichero-icon.svg" alt="">Subir comprobante</li>
+    </ul>
+    <div class="banner">
+        <div id="banner-logo">
+            <!--<img src="./assets/logo.svg" alt=""> -->
+            <img src="./assets/iconos/icons8-luna-32.png" alt="">
+            <h1 id="titulo-de-la-pagina">CompraGamer</h1>
+        </div>
+        <ul class="opciones-usuario">
+            <li class="ingresar normal__banner"><img class="icon-banner" src="./assets/user-icon.svg" alt=""> <a class = "btn_iniciar_sesion">Ingresar</a> </li>
+            <li class="ingresar user__banner hidden"><img class="icon-banner" src="./assets/user-icon.svg" alt=""><a class = "btn_cerrar_sesion">Cerrar Sesion</a><p id="id_usuario"></p></li>
+            <li class="carrito" id="btn-carrito"><img class="icon-banner" src="./assets/carrito-icon.svg" alt=""><span>Carrito</span></li>
+        </ul>
+    </div>
+    <nav class="banner-bottom">
+        <ul>
+            <li id="inicio-btn">Inicio</li>
+            <li id="arma-tu-pc-btn"  class="actived">Arma tu PC</li>
+            <li id="productos-btn">Productos</li>
+            <li id="ayuda-btn">Ayuda</li>
+            <li id="cargar-producto-btn">Cargar Producto</li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Carrito -->
+    <div class="contenedor-carrito hidden">
+        <div id="cerrar-carrito">
+            <p>X</p>
+        </div>
+        <div class="carrito__" id="carrito">
+            <ul class="productos-en-carrito">
+                <!-- Aqui se deberan cargar los productos al carrito -->
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Mensajes de confirmacion/avisos -->
+    <div id="confirmacion" class="hidden">Se realizo su compra Exitosamente!</div>
+
+    <!-- Aqui se cargara la app -->
+    <main id = "contenedor__principal">
+        <div class="contenedor-arma-tu-pc">
+                <h1>Esto estara para la version final del programa</h1>
+        </div>
+        <div class="arma-tu-pc-seccion">
+        </div>
+    </main>
+
+    <!-- Footer de la pagina -->
+    <footer class="footer">
+        <div class="footer-content">
+          <p class="footer-text">© 2023 CompraGamer</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="index.js" type="module"></script>
+    
+</body>
+</html>

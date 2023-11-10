@@ -1,0 +1,120 @@
+.wrapper-cargar-producto {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-grow: 1;
+
+
+
+    background-image: url("../assets/fondos/fondo-cargar-producto.jpg");
+    background-size: cover;
+}
+
+.contenedor-cargar-producto {
+    background-color: #F5F5F5;
+    border-top: 1px solid black;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+.contenedor-cargar-producto h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-input {
+    margin-bottom: 15px;
+}
+
+.contenedor-input label {
+    display: block;
+    font-weight: bold;
+}
+
+.contenedor-input input[type="text"],
+.contenedor-input input[type="number"],
+.contenedor-input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contenedor-input input[type="checkbox"],
+.contenedor-input input[type="file"] {
+    margin-right: 5px;
+}
+
+.contenedor-input textarea{
+    width: 359px;
+    height: 559px;
+    resize: none;
+}
+
+button[type="submit"] {
+    background-color: #3b5979;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #154272;
+}
+
+#categoria-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-flow: wrap;
+    row-gap: 0.6rem;
+    column-gap: 1rem;
+}
+
+#categoria-list li {
+    display: flex;
+}
+
+#categoria-btn {
+    border: solid 2px rgb(255, 255, 255);
+    background-color: #0f3b69;
+    color: white;
+    font-weight: bold;
+
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.contenedor-producto-creado {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    gap: 4rem;
+}
+
+.producto-creado {
+    background-color: rgba(0, 0, 0, 0.582);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.producto-creado .producto {
+    background-color: whitesmoke;
+}
+
+.mensaje {
+    margin-top: 10rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: #F5F5F5;
+    border-radius: 1rem;
+}
+
+.mensaje h2{
+    font-size: 30px;
+    font-weight: 500;
+}

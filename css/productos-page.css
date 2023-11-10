@@ -1,0 +1,90 @@
+  /* Estilos para el contenedor de productos */
+.productos-section {
+    display: grid;
+    grid-template-columns: 400px 1fr; /* La barra lateral ocupa 400px y el contenido principal se ajusta al espacio restante */
+    gap: 1rem; /* Espacio entre la barra lateral y el contenido principal */
+  }
+  
+  /* Estilos para la galería de productos (usando CSS Grid) */
+  .galeria-productos-section {
+    padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem; 
+  }
+  
+
+.side-bar {
+    padding: 2rem;
+}  
+
+.contenedor-buscador {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem;
+    padding-left: 2rem;
+    background-color: black;
+    border-radius: 0.5rem;
+
+    position: absolute;
+    width: 400px;
+    left: -10px;
+  }
+  
+  #buscador {
+    width: 70%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  #buscar-btn {
+    background-color: rgba(65, 65, 65, 0.479);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #buscar-btn:hover {
+    background-color: rgb(228, 227, 227);
+    color: black;
+  }
+
+@media  screen and (width <= 1200px) {
+    .productos-section {
+        grid-template-columns: 1fr; 
+    }
+
+    .side-bar {
+        width: 100%;
+        padding: 0.5rem 4rem;
+    }
+
+    .contenedor-buscador{
+        padding: 1rem 0;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media  screen and (width <= 780px) {
+    .galeria-productos-section {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+    .side-bar {
+        width: 100%;
+    }
+
+    .contenedor-buscador {
+        width: 100%;
+    }
+
+}

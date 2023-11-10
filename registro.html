@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FAVICON -->
+    <link
+      rel="icon"
+      href="assets/iconos/icons8-luna-32.png"
+      type="image/x-icon"
+    />
+
+    <!-- nombre de la pagina -->
+    <title>CompraGamer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- CARRITO CSS -->
+    <link rel="stylesheet" href="css/carrito.css" />
+
+    <!-- REGISTRO CSS -->
+    <link rel="stylesheet" href="css/registro-usuario.css" />
+  </head>
+  <body>
+    <!-- Header de la pagina -->
+    <header class="header">
+      <ul class="banner-top">
+        <li>
+          <img class="icon" src="./assets/camion-icon.svg" alt="" /> Envios
+          dento de CABA en el dia!
+        </li>
+        <li>
+          <img class="icon" src="./assets/camion-icon.svg" alt="" />Seguir mi
+          pedido
+        </li>
+        <li>
+          <img class="icon" src="./assets/fichero-icon.svg" alt="" />Subir
+          comprobante
+        </li>
+      </ul>
+      <div class="banner">
+        <div id="banner-logo">
+          <!--<img src="./assets/logo.svg" alt=""> -->
+          <img src="./assets/iconos/icons8-luna-32.png" alt="" />
+          <h1 id="nombre-de-la-pagina">CompraGamer</h1>
+        </div>
+        <ul class="opciones-usuario">
+          <li class="ingresar normal__banner">
+            <img class="icon-banner" src="./assets/user-icon.svg" alt="" />
+            <a class="btn_iniciar_sesion">Ingresar</a>
+          </li>
+          <li class="ingresar user__banner hidden">
+            <img class="icon-banner" src="./assets/user-icon.svg" alt="" /><a
+              class="btn_cerrar_sesion"
+              >Cerrar Sesion</a
+            >
+            <p id="id_usuario"></p>
+          </li>
+          <li class="carrito" id="btn-carrito">
+            <img
+              class="icon-banner"
+              src="./assets/carrito-icon.svg"
+              alt=""
+            /><span>Carrito</span>
+          </li>
+        </ul>
+      </div>
+      <nav class="banner-bottom">
+        <ul>
+          <li id="inicio-btn">Inicio</li>
+          <li id="arma-tu-pc-btn">Arma tu PC</li>
+          <li id="productos-btn">Productos</li>
+          <li id="ayuda-btn">Ayuda</li>
+          <li id="cargar-producto-btn">Cargar Producto</li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Carrito -->
+    <div class="contenedor-carrito hidden">
+      <div id="cerrar-carrito">
+        <p>X</p>
+      </div>
+      <div class="carrito__" id="carrito">
+        <ul class="productos-en-carrito">
+          <!-- Aqui se deberan cargar los productos al carrito -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mensajes de confirmacion/avisos -->
+    <div id="confirmacion" class="confirmacion hidden">
+    </div>
+
+    <!-- Aqui se cargara la app -->
+    <main id="contenedor__principal">
+    
+     <div class="contenedor-registro">
+        <div class="formulario-pago">
+            <h1>Registrate</h1>
+            <form id="formulario">
+                <!-- Formulario de Registro -->
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre"/>
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido"/>
+                </div>
+                <div class="campo">
+                  <label for="dni">DNI</label>
+                  <input type="number" id="dni" name="dni"/>
+              </div>
+                <div class="campo">
+                    <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                    <input
+                    type="date"
+                    id="fechaNacimiento"
+                    name="fechaNacimiento"
+                    
+                    />
+                </div>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"  />
+                </div>
+                <div class="campo">
+                  <label for="domicilio">Domicilio</label>
+                  <input type="domicilio" id="domicilio" name="domicilio"  />
+              </div>
+                <div class="campo">
+                    <label for="password">Contraseña</label>
+                    <input type="text" id="password" name="password"  />
+                </div>
+                <div class="campo">
+                    <label for="medioPago">Medio de Pago</label>
+                    <select id="medioPago" name="medioPago" >
+                    <option value="" disabled selected>
+                        Selecciona un Medio de Pago
+                    </option>
+                    <option value="mercadoPago">Mercado Pago</option>
+                    <option value="tarjeta">Tarjeta de Crédito/Débito</option>
+                    <option value="cuentaBancaria">Cuenta Bancaria</option>
+                    </select>
+                </div>
+    
+                <!-- Las opciones si elige mercado pago -->
+                <div id="datosMercadoPago" class="hidden">
+                    <div class="campo">
+                        <label for="emailMercadoPago">Alias</label>
+                        <input
+                            type="text"
+                            id="alias"
+                            name="alias"
+                            
+                        />
+                    </div>
+                    <div class="campo">
+                        <label for="emailMercadoPago">CVU</label>
+                        <input
+                            type="number"
+                            id="cvu"
+                            name="cvu"
+                            
+                        />
+                    </div>
+                </div>
+    
+                <!-- Aca estan las opciones si elige tarjeta -->
+                <div id="datosTarjeta" class="hidden">
+                    <div class="campo">
+                    <label for="numeroTarjeta">Número de Tarjeta</label>
+                    <input
+                        type="number"
+                        id="numeroTarjeta"
+                        name="numeroTarjeta"
+                        
+                    />
+                    </div>
+                    <div class="campo">
+                    <label for="codigoSeguridad">Código de Seguridad</label>
+                    <input
+                        type="number"
+                        id="codigoSeguridad"
+                        name="codigoSeguridad"
+                        
+                    />
+                    </div>
+                    <div class="campo">
+                    <label for="fechaVencimiento">Fecha de Vencimiento</label>
+                    <input
+                        type="date"
+                        id="fechaVencimiento"
+                        name="fechaVencimiento"
+                        
+                    />
+                    </div>
+                </div>
+    
+                <!-- Aca estan las opciones si elige cuenta bancaria -->
+                <div id="datosCuentaBancaria" class="hidden">
+                    <div class="campo">
+                    <label for="cbu">CBU</label>
+                    <input
+                        type="number"
+                        id="cbu"
+                        name="cbu"
+                        
+                    />
+                    </div>
+                    <div class="campo">
+                        <label for="numeroCliente">Número de Cliente</label>
+                        <input
+                            type="number"
+                            id="numeroCliente"
+                            name="numeroCliente"
+                            
+                        />
+                        </div>
+                </div>
+    
+              <button type="submit">Continuar</button>
+            </form>
+          </div>
+     </div>
+    </main>
+
+    <!-- Footer de la pagina -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p class="footer-text">© 2023 CompraGamer</p>
+      </div>
+    </footer>
+    <!-- JS -->
+    <script src="index.js" type="module"></script>
+    <script src="./js/formulario-registro.js" type="module"></script>
+  </body>
+</html>

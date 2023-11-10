@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="assets/iconos/icons8-luna-32.png" type="image/x-icon">
+
+    <!-- Titulo de la pagina -->
+    <title>CompraGamer</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- PRODUCTOS CSS -->
+    <link rel="stylesheet" href="css/productos-page.css">
+
+    <!-- CARGAR PRODUCTO -->
+    <link rel="stylesheet" href="css/cargar-producto.css">
+
+    <!-- CARRITO CSS -->
+    <link rel="stylesheet" href="css/carrito.css">
+    <script src="js/carrito.js" type="module"></script>
+
+</head>
+<body>    
+   <!-- Header de la pagina -->
+   <header class="header">
+    <ul class="banner-top">
+        <li>
+            <img class="icon" src="./assets/camion-icon.svg" alt=""> Envios dento de CABA en el dia!
+        </li>
+        <li><img class="icon" src="./assets/camion-icon.svg" alt="">Seguir mi pedido</li>
+        <li><img class="icon" src="./assets/fichero-icon.svg" alt="">Subir comprobante</li>
+    </ul>
+    <div class="banner">
+        <div id="banner-logo">
+            <!--<img src="./assets/logo.svg" alt=""> -->
+            <img src="./assets/iconos/icons8-luna-32.png" alt="">
+            <h1 id="titulo-de-la-pagina">CompraGamer</h1>
+        </div>
+        <ul class="opciones-usuario">
+            <li class="ingresar normal__banner"><img class="icon-banner" src="./assets/user-icon.svg" alt=""> <a class = "btn_iniciar_sesion">Ingresar</a> </li>
+            <li class="ingresar user__banner hidden"><img class="icon-banner" src="./assets/user-icon.svg" alt=""><a class = "btn_cerrar_sesion">Cerrar Sesion</a><p id="id_usuario"></p></li>
+            <li class="carrito" id="btn-carrito"><img class="icon-banner" src="./assets/carrito-icon.svg" alt=""><span>Carrito</span></li>
+        </ul>
+    </div>
+    <nav class="banner-bottom">
+        <ul>
+            <li id="inicio-btn" >Inicio</li>
+            <li id="arma-tu-pc-btn">Arma tu PC</li>
+            <li id="productos-btn">Productos</li>
+            <li id="ayuda-btn">Ayuda</li>
+            <li id="cargar-producto-btn"  class="actived">Cargar Producto</li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Carrito -->
+    <div class="contenedor-carrito hidden">
+        <div id="cerrar-carrito">
+            <p>X</p>
+        </div>
+        <div class="carrito__" id="carrito">
+            <ul class="productos-en-carrito">
+                <!-- Aqui se deberan cargar los productos al carrito -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Mensajes de confirmacion/avisos -->
+    <div id="confirmacion" class="hidden"></div>
+
+
+    <!-- Aqui se cargara la app -->
+    <main id = "contenedor__principal">
+        <div class="wrapper-cargar-producto">
+            <div class="contenedor-cargar-producto">
+                <h1>Formulario de Carga de Producto</h1>
+                <form id="producto-form">
+                    <div class="contenedor-input">
+                        <label for="titulo">Título: </label>
+                        <input type="text" id="titulo" name="titulo" >
+                    </div>
+    
+                    <div class="contenedor-input">
+                        <label for="imagen">Imagen:</label>
+                        <input type="file" id="imagen" name="imagen" accept="image/*" >
+                    </div>
+    
+                    <div class="contenedor-input">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" name="precio" step="0.01" >
+                    </div>
+    
+                    <div class="contenedor-input">
+                        <label for="categoria">Seleccione las distintas categorias: </label>
+                        <ul id="categoria-list" class="">
+                            <!-- AQUI SE CARGARAN TODAS LAS CATEGORIAS POSIBLES -->
+                        </ul>
+                    </div>
+                    
+                    <div class="contenedor-input">
+                        <label for="stock">Stock Disponible:</label>
+                        <input type="number" id="stock" name="stock" >
+                    </div>
+
+                    <div class="contenedor-input">
+                        <label for="descripcion">Especificacion:</label>
+                        <textarea id="descripcion" name="descripcion" ></textarea>    
+                    </div>
+    
+                    <button id="cargar-datos-btn" type="submit">Cargar Producto</button>
+                </form>
+            </div>
+            <div class="contenedor-producto-creado hidden">
+                <div class="mensaje">
+                    <h2>Aqui tienes una muestra de como quedaria el producto creado:</h2>
+                </div>
+                <div class="producto-creado">
+    
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer de la pagina -->
+    <footer class="footer">
+        <div class="footer-content">
+          <p class="footer-text">© 2023 CompraGamer</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="index.js" type="module"></script>
+    <script src="./js/formulario-crear-producto.js" type="module"></script>
+</body>
+</html>
+

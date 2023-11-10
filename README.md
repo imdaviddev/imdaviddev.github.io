@@ -1,2 +1,1 @@
-# --- David, Software Developer
-Portfolio Web
+# tp-especificacion
