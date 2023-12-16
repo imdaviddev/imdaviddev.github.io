@@ -1,2 +1,2 @@
 # Tienda Compra Gamer
-Link a la pagiana: https://imdaviddev.github.io
+Link a la pagina: https://imdaviddev.github.io
